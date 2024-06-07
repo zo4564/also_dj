@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Also | Add Species
+{% endblock %}
+
+{% block content %}
+
+        <form method="post" enctype="multipart/form-data" class="species-form">
+            {% csrf_token %}
+            <h1>Dodaj nowy gatunek</h1>
+            {{ form.non_field_errors }}
+            <div class="form-group">
+{#                {{ form.species_name.label_tag }}#}
+                <label>Nazwa gatunku:</label>
+                {{ form.species_name }}
+            </div>
+            <div class="form-group">
+{#                {{ form.species_genome.label_tag }}#}
+                <label>Genom:</label>
+                {{ form.species_genome }}
+            </div>
+            <div class="form-group">
+{#                {{ form.species_description.label_tag }}#}
+                <label>Opis:</label>
+                {{ form.species_description }}
+            </div>
+            <div class="form-check">
+{#                {{ form.can_move.label_tag }}#}
+                <label>Organizm może się poruszać</label>
+                {{ form.can_move }}
+            </div>
+            <div class="form-check">
+{#                {{ form.can_defend.label_tag }}#}
+                <label>Organizm może się bronić</label>
+                {{ form.can_defend }}
+            </div>
+            <div class="form-group">
+{#                {{ form.image.label_tag }}#}
+                <label>Obraz</label>
+                {{ form.image }}
+            </div>
+            <button type="submit" class="basic-button">Zapisz</button>
+        </form>
+
+{% endblock %}

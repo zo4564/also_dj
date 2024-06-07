@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Also | Gatunki
+{% endblock %}
+
+{% block content %}
+    <div class="vertical-container">
+        <div class="horizontal-container gaps">
+            {% if user.is_authenticated %}
+                <a class="button light4" href="{% url 'add_species' %}">Dodaj swój gatunek</a>
+            {% else %}
+                <a class="button light4" href="{% url 'login' %}">Zaloguj się, aby dodać swój gatunek</a>
+            {% endif %}
+
+            <a class="button light4" href="{% url 'upload_sim_data' %}">Analizuj wyniki symulacji</a>
+        </div>
+
+
+    {% if species_list %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nazwa gatunku</th>
+                <th>Genom</th>
+                <th>Opis</th>
+                <th>Opublikowano</th>
+                <th>Obraz</th>
+                <th>Autor</th>
+                <th>Głosy</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for species in species_list %}
+            <tr>
+                <td><a href="{% url 'detail' species.id %}">{{ species.species_name }}</a></td>
+                <td>{{ species.species_genome }}</td>
+                <td>{{ species.species_description }}</td>
+                <td>{{ species.pub_date }}</td>
+                <td >
+                    {% if species.image %}
+                        <img class="small-item" src="{{ species.image.url }}" alt="{{ species.species_name }}" width="100">
+                    {% else %}
+                        No image
+                    {% endif %}
+                </td>
+                <td>{{ species.user }}</td>
+                <td>{{ species.score }}</td>
+
+                <td>
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'vote' species.id %}" method="post">
+                        {% csrf_token %}
+
+                        <button type="submit" class="basic-button">Głosuj</button>
+                    </form>
+                    {% endif %}
+                </td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No species are available.</p>
+{% endif %}
+    </div>
+{%  endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Also | Szczegóły gatunku
+{% endblock %}
+
+
+    {% block content %}
+    <div class="species-detail">
+        <h1 class="center-text">{{ species.species_name }}</h1>
+        <div class="horizontal-container wide">
+            <div class="vertical-container vertical-left" >
+
+                <p>Opublikowano: {{ species.pub_date }}</p>
+                <p><strong>Genom:</strong> {{ species.species_genome }}</p>
+                <p><strong>Opis:</strong> {{ species.species_description }}</p>
+                <p><strong>Poruszanie:</strong> {{ species.can_move|yesno:"Tak,Nie" }}</p>
+                <p><strong>Obrona:</strong> {{ species.can_defend|yesno:"Tak,Nie" }}</p>
+                <p><strong>Autor:</strong> {{ species.user }}</p>
+                <p><strong>Głosy:</strong> {{ species.score }}</p>
+            </div>
+        <div>
+                <p>
+                    {% if species.image %}
+                        <img src="{{ species.image.url }}" alt="{{ species.species_name }}" width="300">
+                    {% else %}
+                        No image available
+                    {% endif %}
+                </p>
+        </div>
+        </div>
+        <div class="horizontal-container">
+            {% if user.is_authenticated %}
+                <form action="{% url 'vote' species.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="basic-button">Głosuj</button>
+                </form>
+            {% else %}
+                <a class="button light4" href="{% url 'login' %}">Zaloguj się, aby zagłosować</a>
+            {% endif %}
+
+
+            <a class="button light4" href="{% url 'species_list' %}" >Powrót do listy gatunków</a>
+        </div>
+
+    </div>
+    {% endblock %}

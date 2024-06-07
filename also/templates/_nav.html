@@ -1,0 +1,23 @@
+<!-- base.html or the template containing the navbar -->
+
+{% load static %}
+<div class="navbar">
+    <div>
+        <h2>ALSO</h2>
+    </div>
+    <div>
+        <a class="button light2" href={% url 'index' %}>Start</a>
+        <a class="button light2" href={% url 'play' %}>Graj</a>
+        <a class="button light2" href={% url 'rules' %}>Jak to działa?</a>
+        <a class="button light2" href={% url 'about' %}>O projekcie</a>
+        <a class="button light2" href={% url 'species_list' %}>Gatunki</a>
+
+        {% if user.is_authenticated %}
+            <a class="button light2" href={% url 'user_page' %}>Moje konto</a>
+            <a class="button light2" href={% url 'logout' %}>Wyloguj się</a>
+        {% else %}
+            <a class="button light2" href={% url 'login' %}>Zaloguj się</a>
+            <a class="button light2" href={% url 'register' %}>Zarejestruj się</a>
+        {% endif %}
+    </div>
+</div>

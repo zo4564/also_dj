@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Also | Gatunki
+{% endblock %}
+
+{% block content %}
+    <div class="vertical-container">
+        <h2>Prześlij zapis symulacji</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="json_file" accept=".json">
+            <button type="submit" class="basic-button">Prześlij</button>
+        </form>
+
+        {% if graphic %}
+            <h2>Wykres przebiegu symulacji</h2>
+            <img src="data:image/png;base64,{{ graphic }}" alt="Chart">
+            <div class="baner narrow light1">
+                <p>
+                    Każdy wariant gatunku, który wyewoluowal podczas symulacji jest oznaczany nową nazwą.
+                    Wykres przedstawia rozwój poszczególnych populacji w czasie. Gatunki, które mają identyczny genom,
+                    zaznaczone są jednym kolorem.
+                </p>
+            </div>
+        {% endif %}
+
+
+    <div class="wide">
+        {% if genome_species_data %}
+            <h2>Genomy i Gatunki</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Genom</th>
+                        <th>Gatunki</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for genome, species_data in genome_species_data.items %}
+                        <tr>
+                            <td>{{ genome }}</td>
+                            <td>
+                                <ul>
+                                    {% for species_name in species_data.species_names %}
+                                        <li>{{ species_name }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        {% if user.is_authenticated %}
+                            <td>
+                                <form method="get" action="{% url 'add_species' %}">
+                                    <input type="hidden" name="genome" value="{{ genome }}">
+                                    <button type="submit" class="basic-button">Dodaj ten gatunek</button>
+                                </form>
+                            </td>
+                        {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}
+</div>

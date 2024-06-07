@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Also | Zasady
+{% endblock %}
+
+{% block content %}
+            <div class="content">
+                
+                <div class="vertical-container">
+                    <div class="baner light1 shadow wide">
+                        <h2>Czym jest ALSO?</h2>
+                        <p>
+                            ALSO to gra symulacyjna, która polega na tworzeniu sztucznego życia oraz na zasadach doboru naturalnego. 
+                            Możesz obserwować ewolucję zaprojektowanych przez siebie stworzeń i wpływać na ich rozwój.  
+                        </p>
+                        <p>
+                            Gra ALSO zabierze Cię w podróż do świata ewolucji, gdzie możesz tworzyć gatunki organizmów i wpłynąć na losy ekosystemu. 
+                            Poznasz mechanizmy rządzące światem przyrody i zobaczysz ich działanie w  stworzonym przez Ciebie świecie. 
+                        </p>
+                    </div>
+                    <div class="baner light1 shadow wide">
+                       
+                        <h2> Twórz własne gatunki </h2>
+                        <p>
+                            Pierwszy krok to zaprojektowanie stworzeń, które będą żyły w symulacji. Możesz zdecydować, jak będą wyglądały i jak będą się zachowywały. 
+                            Eksperymentuj - przygotuj kilka gatunków i oglądaj, jak konkurują między sobą o dominację w świecie.   
+                        </p>
+                        <div class="horizontal-container">
+                            <img src="{% static 'also/img/org1.png' %}" alt="przykładowy organizm">
+                            <img src="{% static 'also/img/org2.png' %}" alt="przykładowy organizm">
+                            <img src="{% static 'also/img/org3.png' %}" alt="przykładowy organizm">
+
+                        </div>
+                    </div>
+                    <div class="baner light1 shadow wide">
+                       
+                        <h2> Jak zaprojektować organizm? </h2>
+                        <p>
+                            Części ciała, które możesz wykorzystać do zbudowania organizmu: 
+                        </p>
+                        <div class="big-container wider">
+                            <div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div>
+                            <div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div>
+                            <div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div>
+                            <div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div>
+                            <div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div><div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div>
+                            <div>
+                                <p>
+                                    część ciała 1
+                                </p>
+                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="baner light1 shadow wide">
+                       
+                        <h2> Za co odpowiada genom organizmu? </h2>
+                        <p>
+                            Każdy organizm posiada genom, który decyduje o jego budowie oraz zachowaniu.   
+                            W genomie organizmu, znajduje się informacja, z jakich części ciała się składa organizm,
+                            jak szybko się porusza, czy może atakować inne organizmy i czy umie się przed atakami bronić.
+
+                        </p>
+                        
+                        <p>
+                            Oznaczenie części ciała w genomie: <br>
+                            <b> litera + indeks przekaźnika + wektor przesunięcia </b> względem środka ciała lub przekaźnika.
+                        </p>
+                        <p>
+                            Każda część ciała pobiera pewną ilość energii podczas funkcjonowania. Im więcej części
+                            ciała organizm posiada, tym więcej potrzebuje zdobyć pożywienia, aby przetrwać i się rozmnożyć.
+                            Reprodukcja polega na wytworzeniu swojej kopii ze zmutowanym genomem. 
+                        </p>
+                    </div>
+                </div>
+                
+
+            </div>
+
+{% endblock %}
