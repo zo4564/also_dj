@@ -1,3 +1,4 @@
 media/species_images
 db.sqlite3
 also/migrations
+.idea
