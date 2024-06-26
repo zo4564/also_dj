@@ -6,108 +6,223 @@
 {% endblock %}
 
 {% block content %}
-            <div class="content">
-                
-                <div class="vertical-container">
-                    <div class="baner light1 shadow wide">
-                        <h2>Czym jest ALSO?</h2>
-                        <p>
-                            ALSO to gra symulacyjna, która polega na tworzeniu sztucznego życia oraz na zasadach doboru naturalnego. 
-                            Możesz obserwować ewolucję zaprojektowanych przez siebie stworzeń i wpływać na ich rozwój.  
-                        </p>
-                        <p>
-                            Gra ALSO zabierze Cię w podróż do świata ewolucji, gdzie możesz tworzyć gatunki organizmów i wpłynąć na losy ekosystemu. 
-                            Poznasz mechanizmy rządzące światem przyrody i zobaczysz ich działanie w  stworzonym przez Ciebie świecie. 
-                        </p>
-                    </div>
-                    <div class="baner light1 shadow wide">
-                       
-                        <h2> Twórz własne gatunki </h2>
-                        <p>
-                            Pierwszy krok to zaprojektowanie stworzeń, które będą żyły w symulacji. Możesz zdecydować, jak będą wyglądały i jak będą się zachowywały. 
-                            Eksperymentuj - przygotuj kilka gatunków i oglądaj, jak konkurują między sobą o dominację w świecie.   
-                        </p>
-                        <div class="horizontal-container">
-                            <img src="{% static 'also/img/org1.png' %}" alt="przykładowy organizm">
-                            <img src="{% static 'also/img/org2.png' %}" alt="przykładowy organizm">
-                            <img src="{% static 'also/img/org3.png' %}" alt="przykładowy organizm">
+<div class="content">
+    <div class="slider">
+        <div class="slide active">
+            <h2>Jak grać?</h2>
+            <p>Rozpocznij samouczek.</p>
+            <img src="{% static 'also/img/organism3.png' %}" alt="Przykładowy organizm">
+            <p>Użyj przycisków lub strzałek, aby przejść dalej.</p>
+        </div>
+         <div class="slide">
+            <h2>Tworzenie gatunków</h2>
+            <p>Zacznij od zaprojektowania swojego gatunku!
+                Wybierz opcję <strong>projektuj gatunki</strong>, aby przejść do panelu projektanta gatunków.</p>
+            <img src="{% static 'also/img/projetkowanie.png' %}" alt="Panel projektanta gatunków">
+        </div>
+        <div class="slide">
+            <h2>Paleta części</h2>
+            <p>Części ciała, których możesz użyć do zbudowania organizmu znajdują się w palecie części.
+                Zacznij budowę organizmu - kliknij na wybraną część ciała, a następnie na miejsce, gdzie chcesz ją postawić.
+                Jeśli się pomylisz, możesz zresetować organizm przyciskiem resetuj. </p>
+            <img src="{% static 'also/img/paletaczesci.png' %}" alt="Paleta części">
+            <a class="button light4 nice-border" href="#body_parts">Z czego można zbudować organizm?</a>
+        </div>
+        <div class="slide">
+            <h2>Wskazówka</h2>
+            <p>Projektując organizm, pamiętaj, że będzie się on poruszał w kierunku zaznaczonym na grafice poniżej.
+            </p>
 
-                        </div>
-                    </div>
-                    <div class="baner light1 shadow wide">
-                       
-                        <h2> Jak zaprojektować organizm? </h2>
-                        <p>
-                            Części ciała, które możesz wykorzystać do zbudowania organizmu: 
-                        </p>
-                        <div class="big-container wider">
-                            <div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div>
-                            <div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div>
-                            <div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div>
-                            <div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div>
-                            <div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div><div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div>
-                            <div>
-                                <p>
-                                    część ciała 1
-                                </p>
-                                <img class="small-item" src="{% static 'also/img/logo-s.png' %}" alt="m">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="baner light1 shadow wide">
-                       
-                        <h2> Za co odpowiada genom organizmu? </h2>
-                        <p>
-                            Każdy organizm posiada genom, który decyduje o jego budowie oraz zachowaniu.   
-                            W genomie organizmu, znajduje się informacja, z jakich części ciała się składa organizm,
-                            jak szybko się porusza, czy może atakować inne organizmy i czy umie się przed atakami bronić.
-
-                        </p>
-                        
-                        <p>
-                            Oznaczenie części ciała w genomie: <br>
-                            <b> litera + indeks przekaźnika + wektor przesunięcia </b> względem środka ciała lub przekaźnika.
-                        </p>
-                        <p>
-                            Każda część ciała pobiera pewną ilość energii podczas funkcjonowania. Im więcej części
-                            ciała organizm posiada, tym więcej potrzebuje zdobyć pożywienia, aby przetrwać i się rozmnożyć.
-                            Reprodukcja polega na wytworzeniu swojej kopii ze zmutowanym genomem. 
-                        </p>
-                    </div>
-                </div>
-                
+            <img src="{% static 'also/img/poruszaniesie.png' %}" alt="Poruszanie się organizmu">
+        </div>
+        <div class="slide">
+            <h2>Panel właściwości</h2>
+            <p>Poniżej palety części znajduje się panel właściwości.
+                Tutaj możesz wpisać nazwę gatunku, dać mu umiejętność poruszania się oraz obrony i określić
+                ile takich organizm pojawi się w symulacji.</p>
+            <img src="{% static 'also/img/panelwlasciwosci.png' %}" alt="Panel właściwości">
+        </div>
+        <div class="slide">
+            <h2>Wskazówka</h2>
+            <p>Pamiętaj, że im bardziej będzie rozbudowany organizm, tym więcej energii będzie potrzebował do życia.
+                Może się zdarzyć, że zbyt zaawansowane organizmy będą miały trudności w przeżyciu w symulacji!
+            </p>
+            <p>Zapisz rezultat swojej pracy nad gatunkiem przyciskiem zapisz.
+                Nazwa utworzonego gatunku i liczba organizmów, które pojawią się w symulacji wyświetli się w prawym górnym rogu, na liście utworzonych gatunków.
+            </p>
+            <img src="{% static 'also/img/organism2.png' %}" alt="Panel właściwości">
+        </div>
+        <div class="slide">
+            <h2>Uruchom symulację!</h2>
+            <p>Możesz zaprojektować wiele gatunków, które będą żyły w Twojej symulacji. Pamiętaj, aby gotowe gatunki zapisać przyciskiem zapisz.
+                Kliknij przycisk graj, aby uruchomić symulację.  </p>
+            <img src="{% static 'also/img/przyciki.png' %}" alt="Przyciski">
+        </div>
+        <div class="slide">
+            <h2>Symulacja</h2>
+            <p>Po uruchomieniu symulacji, pojawią się wszystkie organizmy, które zaprojektowałeś. Niektóre z nich mogą się nieco różnić –
+                to organizmy, które zmutowały! Jeśli organizm różni się od swojego wzoru, tworzy nowy gatunek.
+                Z tego powodu możesz widzieć więcej gatunków, niż zaprojektowałeś. Liczbę żywych organizmów zobaczysz w lewym dolnym rogu,
+                a poniżej znajdziesz liczbę gatunków, które aktualnie występują w symulacji.  </p>
+            <img src="{% static 'also/img/symulacja.png' %}" alt="Symulacja">
+        </div>
+        <div class="slide">
+            <h2>Obserwuj organizmy</h2>
+            <p>Jeśli klikniesz na wybrany organizm, przejdziesz w tryb śledzenia, w którym możesz zobaczyć panel organizmu.
+                Znajdują się tam szczegóły, takie jak energia i nazwa oraz przycisk kopiuj genom, za pomocą którego możesz skopiować genom organizmu.</p>
+            <img src="{% static 'also/img/sledzenie.png' %}" alt="Tryb śledzenia organizmu">
+        </div>
+        <div class="slide">
+            <h2>Poruszanie się po symulacji</h2>
+            <p>Jeśli chcesz obejrzeć inne organizmy w symulacji, możesz użyć strzałek oraz scrolla myszki do
+                przesuwania kamery lub kliknąć spację, która automatycznie przeniesie Cię do kolejnego organizmu.</p>
+            <div class="horizontal-container">
+                <img class="small-item" src="{% static 'also/img/keys.png' %}" alt="Nawigacja spacją">
+                <p></p>
+            <img class="small-item" src="{% static 'also/img/arrows(1).png' %}" alt="Nawigacja strzałkami">
 
             </div>
 
+        </div>
+        <div class="slide">
+            <h2>Symulacja z kodów</h2>
+            <p>Możesz uruchomić symulację z gatunkami, które już istnieją. Przycisk <strong>symulacja z kodów</strong> przeniesie Cię do panelu dodawania gatunków. </p>
+            <img class="medium-item" src="{% static 'also/img/kody.png' %}" alt="Symulacja z kodów">
+        </div>
+        <div class="slide">
+            <h2>Symulacja z kodów</h2>
+            <p>W tym miejscu możesz wkleić kod genetyczny organizmu, nazwać gatunek oraz określić jak liczny będzie w symulacji. Następnie zapisz gatunek przyciskiem <strong>zapisz</strong>.</p>
+            <a class="button light4 nice-border" href="#kod">Co to jest kod genetyczny?</a>
+            <p> Możesz dodać wiele gatunków i uruchomić symulację przyciskiem <strong>start</strong>. Symulacja przebiega tak samo, jak w przypadku uruchomienia z poziomu panelu projektanta gatunków.</p>
+
+        </div>
+        <div class="slide">
+            <h2>Zapisz wyniki symulacji</h2>
+            <p>Na koniec symulacji możesz zapisać jej przebieg przyciskiem <strong>zapisz dane symulacji</strong>.
+                Utworzony plik, możesz przesłać na stronę analiza symulacji w serwisie ALSOweb.
+                </p>
+                <p></p>
+            <a class="button light4 nice-border" href="{% url 'upload_sim_data' %}">Analiza wyników symulacji</a>
+            <p></p>
+            <p>Po przesłaniu pliku zobaczysz listę gatunków, które wyewoluowały wraz z wykresami, które pokazują jak dużo było organizmów każdego z nich w czasie trwania symulacji.
+            </p><p>Możesz dzielić się utworzonymi gatunkami i oglądać te, które zrobili inni gracze!</p>
+            <div class="horizontal-container">
+                <a class="button light4 nice-border" href="{% url 'add_species' %}">Dodaj nowy gatunek</a>
+                <p></p>
+                <a class="button light4 nice-border" href="{% url 'species_list' %}">Obejrzyj gatunki</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="navigation">
+        <button class="nav-button" id="nav-button-left"><</button>
+        <button class="nav-button" id="nav-button-right">></button>
+    </div>
+</div>
+<div class="vertical-container" id="body_parts">
+    <div class="baner light1 shadow wide" id="organism-structure">
+
+                        <h2> Budowa organizmu </h2>
+                        <p>
+                            Części ciała, które możesz wykorzystać do zbudowania organizmu:
+                        </p>
+                        <div class="big-container wider">
+                            <div class="vertical-container narrower up nice-border">
+                                <h3>Część bazowa</h3>
+                                <img class="small-item" src="{% static 'also/img/body.png' %}" alt="Część bazowa organizmu">
+                                <p>
+                                    To główna część organizmu – na niej możesz umieścić wszystkie pozostałe części.
+                                </p>
+
+                            </div>
+                            <div class="vertical-container narrower up nice-border">
+                                <h3>Usta</h3>
+                                <img class="small-item" src="{% static 'also/img/mouth.png' %}" alt="Usta organizmu">
+                                <p>
+                                   Organizm może zjeść pożywienie, jeśli dotknie go ustami.
+                                </p>
+
+                            </div>
+                            <div class="vertical-container narrower up nice-border">
+                                <h3>Oko</h3>
+                                <img class="small-item" src="{% static 'also/img/eye.png' %}" alt="Oko organizmu">
+                                <p>
+                                    Za pomocą oczu organizm może zobaczyć, gdzie znajduje się pożywienie.
+                                    Każde oko organizmu patrzy w stronę, w którą jest zwrócone.
+                                </p>
+
+                            </div>
+                            <div class="vertical-container narrower up nice-border">
+                                <h3>Broń</h3>
+                                <img class="small-item" src="{% static 'also/img/gun.png' %}" alt="Broń organizmu">
+                                <p>
+                                    Organizm, który ma broń, może zabijać inne organizmy. Żeby pokonać inny organizm, broń musi go dotknąć w bazową część ciała.
+                                    Zabity organizm zamienia się w pożywienie.
+                                </p>
+
+                            </div>
+                            <div class="vertical-container narrower up nice-border">
+                                <h3>Przekaźnik</h3>
+                                <img class="small-item" src="{% static 'also/img/joint.png' %}" alt="Przekaźnik">
+                                <p>
+                                    Przekaźnik pozwala na rozbudowanie organizmu. Można go umieścić na części bazowej i na nim osadzić inne części ciała.
+                                    Przekaźnik nie może być umieszczony na innym przekaźniku.
+
+                                </p>
+
+                            </div>
+                            <div class="vertical-container narrower up nice-border">
+                                <h3>Kwiat</h3>
+                                <img class="small-item" src="{% static 'also/img/eater.png' %}" alt="Część ciała - kwiat">
+                                <p>
+                                    To część ciała, która zmienia organizm ze  zwierzęcia w roślinę. Organizm, który ma tę część ciała, nie potrzebuje pożywienia i nie może się poruszać.
+                                    Zamiast tego może wytwarzać pożywienie dla innych organizmów w symulacji.
+                                </p>
+
+                            </div>
+                            <div class="vertical-container narrower up  nice-border">
+                                <h3>Tarcza</h3>
+                                <img class="small-item" src="{% static 'also/img/circle.png' %}" alt="Tarcza organizmu">
+                                <p>
+                                    Organizmy mogą bronić się przed atakami.
+                                    Taka umiejętność przedstawiona jest w symulacji za pomocą złotej tarczy dookoła organizmu.
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="baner light1 shadow wide" id="kod">
+
+
+
+                        <h2>Skąd wziąć kod genetyczny?</h2>
+                        <p>Kod genetyczny każdego organizmu możesz skopiować w trakcie symulacji – wystarczy, że wybierzesz organizm, a następnie klikniesz przycisk kopiuj genom. W ten sposób, możesz uruchomić symulację z gatunkami, które już zaprojektowałeś. </p>
+                        <p>ALSOweb jest miejscem, gdzie znajdziesz  kody genetyczne dla wielu organizmów. Skopiuj dowolne kody z listy gatunków i zobacz, jak stworzone w ten sposób organizmy radzą sobie w Twojej symulacji!</p>
+                        <a class="button light4 nice-border" href="{% url 'species_list' %}">Gatunki z kodami genetycznymi</a>
+                        <img class="small-item" src="{% static 'also/img/dna.png' %}" alt="DNA">
+                        <h2> Co to jest kod genetyczny? </h2>
+                        <p>
+                            W grze ALSO kod genetyczny to zapis informacji o tym, jak zbudowany jest organizm. W symulacji jest on przedstawiony za pomocą ciągu znaków. Można go łatwo rozszyfrować – składa się z części oddzielonych znakiem #. Pierwsza litera po # oznacza część ciała,
+                            następnie pojawia się numer przekaźnika, na którym ta część jest umieszczona i w nawiasie znajduje się pozycja tej części.
+                        </p>
+
+                        <p>
+                            Oznaczenie części ciała w kodzie: <br>
+                            # <b> litera + indeks przekaźnika + wektor przesunięcia </b> względem środka ciała lub przekaźnika.
+                        </p>
+                        <p>
+                            W kodzie genetycznym znajduje się informacja z jakich części ciała składa się organizm,
+                            jak szybko się porusza, czy może atakować inne organizmy i czy umie się przed atakami bronić.
+                        </p>
+                    </div>
+</div>
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'also/css/slider.css' %}">
+{% endblock %}
+
+{% block javascripts %}
+<script src="{% static 'also/js/slider.js' %}"></script>
 {% endblock %}

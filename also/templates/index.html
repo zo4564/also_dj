@@ -1,9 +1,53 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     Also | Start
 {% endblock %}
 
 {% block content %}
-    <h1>start</h1>
+            <div class="content">
+
+                <div class="vertical-container">
+                    <div class="baner light1 shadow wide">
+                        <h2>Czym jest ALSO?</h2>
+                        <p>
+                            ALSO to gra symulacyjna, która polega na tworzeniu sztucznego życia oraz na zasadach doboru naturalnego.
+                            Możesz obserwować ewolucję zaprojektowanych przez siebie stworzeń i wpływać na ich rozwój.
+                        </p>
+                        <p></p>
+                        <div class="horizontal-container">
+                            <a class="button light4 nice-border" href="{% url 'rules' %}">Jak działa ALSO?</a>
+                            <p></p>
+                            <a class="button light4 nice-border" href="{% url 'education' %}">Selekcja naturalna</a>
+                            <p></p>
+                            <a class="button light4 nice-border" href="{% url 'play' %}">Zagraj w grę</a>
+                        </div>
+                        <p></p>
+                        <p>
+                            Gra ALSO zabierze Cię w podróż do świata ewolucji, gdzie możesz tworzyć gatunki organizmów i wpłynąć na losy ekosystemu.
+                            Poznasz mechanizmy rządzące światem przyrody i zobaczysz ich działanie w  stworzonym przez Ciebie świecie.
+                        </p>
+
+                    </div>
+                    <div class="baner light1 shadow wide">
+
+                        <h2> Twórz własne gatunki </h2>
+                        <p>
+                            Pierwszy krok to zaprojektowanie stworzeń, które będą żyły w symulacji. Możesz zdecydować, jak będą wyglądały i jak będą się zachowywały.
+                            Eksperymentuj - przygotuj kilka gatunków i oglądaj, jak konkurują między sobą o dominację w świecie.
+                        </p>
+                        <div class="horizontal-container">
+                            <img src="{% static 'also/img/org1.png' %}" alt="przykładowy organizm">
+                            <img src="{% static 'also/img/org2.png' %}" alt="przykładowy organizm">
+                            <img src="{% static 'also/img/org3.png' %}" alt="przykładowy organizm">
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
 {% endblock %}

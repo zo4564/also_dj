@@ -6,9 +6,10 @@
 
 
     {% block content %}
-    <div class="species-detail">
+        <div class="vertical-container">
+    <div class="baner light1 shadow wide">
         <h1 class="center-text">{{ species.species_name }}</h1>
-        <div class="horizontal-container wide">
+        <div class="horizontal-container wider">
             <div class="vertical-container vertical-left" >
 
                 <p>Opublikowano: {{ species.pub_date }}</p>
@@ -22,7 +23,7 @@
         <div>
                 <p>
                     {% if species.image %}
-                        <img src="{{ species.image.url }}" alt="{{ species.species_name }}" width="300">
+                        <img class="medium-item" src="{{ species.image.url }}" alt="{{ species.species_name }}" width="300">
                     {% else %}
                         No image available
                     {% endif %}
@@ -30,18 +31,21 @@
         </div>
         </div>
         <div class="horizontal-container">
+            <a class="button light4 nice-border" href="{% url 'species_list' %}" >Powrót do listy gatunków</a>
+            <p></p>
             {% if user.is_authenticated %}
                 <form action="{% url 'vote' species.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="basic-button">Głosuj</button>
+                    <button type="submit" class="button light4 nice-border">Głosuj</button>
                 </form>
             {% else %}
-                <a class="button light4" href="{% url 'login' %}">Zaloguj się, aby zagłosować</a>
+                <a class="button light4 nice-border" href="{% url 'login' %}">Zaloguj się, aby zagłosować</a>
             {% endif %}
 
 
-            <a class="button light4" href="{% url 'species_list' %}" >Powrót do listy gatunków</a>
+
         </div>
 
     </div>
+        </div>
     {% endblock %}

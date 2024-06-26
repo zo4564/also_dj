@@ -4,7 +4,7 @@
 <div class="wider vertical-container">
     <h1>Witaj, {{ user.username }}!</h1>
     <div class="horizontal-container wide">
-        <div class="species-detail vertical-container vertical-left up">
+        <div class="vertical-container vertical-left up baner light1 shadow wide">
 
 
 
@@ -12,21 +12,21 @@
             <div class="big-container">
                 {% if added_species %}
                     {% for species in added_species %}
-                        <a href="{% url 'detail' species.id %}" class="button basic-button">{{ species.species_name }}</a>
+                        <a href="{% url 'detail' species.id %}" class="button basic-button nice-border">{{ species.species_name }}</a>
                     {% endfor %}
                 {% else %}
                     <p>Jeszcze nie dodałeś żadnych gatunków.</p>
                 {% endif %}
             </div>
         </div>
-        <div class="species-detail vertical-container vertical-left up">
+        <div class="vertical-container vertical-left up baner light1 shadow wide">
 
 
             <h2>Twoje głosy </h2>
             <div class="big-container">
                 {% if voted_species %}
                     {% for species in voted_species %}
-                        <a href="{% url 'detail' species.id %}" class="button basic-button">{{ species.species_name }}</a>
+                        <a href="{% url 'detail' species.id %}" class="button basic-button nice-border">{{ species.species_name }}</a>
                     {% endfor %}
                     </ul>
                 {% else %}
@@ -36,9 +36,9 @@
         </div>
     </div>
         <div class="big-container gaps">
-            <a class="button light4" href="{% url 'add_species' %}">Dodaj nowy gatunek</a>
-            <a class="button light4" href="{% url 'species_list' %}">Przeglądaj wszystkie gatunki</a>
-            <a class="button light4" href="{% url 'upload_sim_data' %}">Analizuj wyniki symulacji</a>
+            <a class="button light4 nice-border" href="{% url 'add_species' %}">Dodaj nowy gatunek</a>
+            <a class="button light4 nice-border" href="{% url 'species_list' %}">Przeglądaj wszystkie gatunki</a>
+            <a class="button light4 nice-border" href="{% url 'upload_sim_data' %}">Analizuj wyniki symulacji</a>
         </div>
 </div>
 {% endblock %}

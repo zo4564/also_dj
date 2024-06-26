@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Also | Edukacja
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="slider">
+        <div class="slide active">
+            <h1>Selekcja naturalna</h1>
+            <p class="left-text">Zapoznaj się z interaktywnym kursem i dowiedz się jak działa selekcja naturalna!</p>
+            <img class="medium-item" src="{% static 'also/img/idea.png' %}" alt="Wiedza ">
+
+            <p class="left-text">Użyj przycisków lub strzałek, aby przejść dalej.</p>
+
+
+         </div>
+         <div class="slide">
+             <h1>Klucz do zrozumienia ewolucji</h1>
+             <div class="horizontal-container">
+                 <div class="vertical-container">
+                     <p class="left-text">Selekcja naturalna to jeden z fundamentalnych mechanizmów ewolucji, który został po raz pierwszy szczegółowo opisany przez Karola Darwina w jego słynnej pracy "O pochodzeniu gatunków" z 1859 roku. </p>
+                     <p class="left-text">Jest to proces, w którym organizmy najlepiej przystosowane do swojego środowiska mają większe szanse na przetrwanie i rozmnożenie się, przekazując swoje korzystne cechy potomstwu.</p>
+                 </div>
+                 <div class="vertical-container">
+                     <img class="medium-item" src="{% static 'also/img/darwin.jpg' %}" alt="Karol Darwin">
+                     <p>Karol Darwin</p>
+                     <p class="img-caption">Zdjęcia autorstwa <a href="//commons.wikimedia.org/wiki/File:Charles_Darwin_seated.jpg" title="File:Charles Darwin seated.jpg">Charles_Darwin_seated.jpg</a>: <a href="https://en.wikipedia.org/wiki/Henry_Maull" class="extiw" title="w:Henry Maull">Henry Maull</a> (1829–1914) and <a href="https://en.wikipedia.org/wiki/John_Fox" class="extiw" title="w:John Fox">John Fox</a> (1832–1907) (Maull &amp; Fox) <a href="#cite_note-3">[3]</a>derivative work: <a href="//commons.wikimedia.org/wiki/User:Beao" title="User:Beao">Bea</a><a href="//commons.wikimedia.org/wiki/User_talk:Beao" title="User talk:Beao">o</a> - <a href="//commons.wikimedia.org/wiki/File:Charles_Darwin_seated.jpg" title="File:Charles Darwin seated.jpg">Charles_Darwin_seated.jpg</a>, Domena publiczna, <a href="https://commons.wikimedia.org/w/index.php?curid=11264065">Link</a>
+                        </p>
+                 </div>
+             </div>
+
+
+         </div>
+         <div class="slide">
+            <h2>Jak działa selekcja naturalna?</h2>
+            <p>Selekcja naturalna opiera się na kilku kluczowych założeniach:</p>
+
+             <div class="nice-border">
+                <p><strong>Dziedziczenie</strong></p>
+                <p><strong>Zmienność osobnicza</strong></p>
+                <p><strong>Nadwyżka rozrodczości</strong></p>
+                <p><strong>Walka o przetrwanie</strong></p>
+                <p><strong>Przystosowanie do środowiska</strong></p>
+             </div>
+              <p>Obejrzyj kolejne slajdy, aby dowiedzieć się jak działa każde z nich.</p>
+         </div>
+         <div class="slide">
+            <h2>Dziedziczenie</h2>
+
+                 <div class="vertical-container">
+
+
+                     <img class="medium-item" src="{% static 'also/img/inherit.png' %}" alt="Dziedziczenie">
+                 <p class="left-text">Dziedziczenie to sposób, w jaki przekazywane są cechy potomstwu. Dziedziczenie umożliwia rodzicom przekazanie korzystnych cech ich dzieciom.</p>
+                 </div>
+         </div>
+        <div class="slide">
+            <h2>Zmienność osobnicza</h2>
+
+                 <div class="vertical-container">
+                     <img class="medium-item" src="{% static 'also/img/diversity.png' %}" alt="Zróżniocowanie">
+                 <p class="left-text">Każdy jest inny i nie ma dwóch takich samych osobników. W każdej populacji występuje zróżnicowanie genetyczne.</p>
+                 </div>
+         </div>
+        <div class="slide">
+            <h2>Nadwyżka rozrodczości</h2>
+
+                 <div class="vertical-container">
+                     <img class="medium-item" src="{% static 'also/img/teddy-bear.png' %}" alt="Miś">
+                 <p class="left-text">Rodzi się więcej organizmów niż jest w stanie przetrwać.</p>
+                 </div>
+         </div>
+        <div class="slide">
+            <h2>Walka o przetrwanie</h2>
+
+                 <div class="vertical-container">
+                     <img class="medium-item" src="{% static 'also/img/fight.png' %}" alt="Walka o przetrwanie">
+                 <p class="left-text">Ponieważ w każdym pokoleniu występuje więcej potomstwa niż jest w stanie przeżyć, organizmy muszą ze sobą konkurować.</p>
+                 </div>
+         </div>
+        <div class="slide">
+            <h2>Przystosowanie do środowiska</h2>
+
+                 <div class="vertical-container">
+                     <img class="medium-item" src="{% static 'also/img/smart-farm.png' %}" alt="Dostosowanie do środowiska">
+                 <p class="left-text">Organizmy najlepiej przystosowane do środowiska mają największe szanse na przeżycie.</p>
+                 </div>
+         </div>
+         <div class="slide">
+            <h2>Przykłady selekcji naturalnej</h2>
+                 <img class="small-item" src="{% static 'also/img/example.png' %}" alt="Przykłady">
+             <p>Obejrzyj kolejne slajdy i zapoznaj się z przykładami tego mechanizmu.</p>
+
+
+            </div>
+        <div class="slide">
+             <h1>Przykład 1. Ćma krępak nabrzozak</h1>
+             <div class="horizontal-container">
+                 <div class="vertical-container">
+                     <p class="left-text">Klasycznym przykładem selekcji naturalnej jest przypadek ćmy krępaka nabrzozaka. Na obszarach zanieczyszczonych przemysłowo w Anglii w okresie rewolucji przemysłowej jasne porosty na korze drzew zostały zniszczone przez wytworzone zanieczyszczenia. Pnie drzew bez jasnych porostów miały ciemną barwę, co doprowadziło do pojawienia się ciemniejszej formy ćmy.</p>
+                     <p class="left-text"> Jasne ćmy zostały wyparte przez ciemne, które lepiej się kamuflowały na pniach drzew. Dzięki temu miały większą szansę na przeżycie i wydanie na świat potomstwa o podobnym ubarwieniu.</p>
+                 </div>
+                 <div class="vertical-container">
+                     <img class="medium-item" src="{% static 'also/img/cma.jpg' %}" alt="Ćmy o jasnym i ciemnym ubarwieniu na pniu drzewa">
+                     <p>Różnice w ubarwieniu ćmy</p>
+                     <p class="img-caption">Zdjęcia autorstwa <a href="//commons.wikimedia.org/w/index.php?title=User:Martinowsky&amp;action=edit&amp;redlink=1" class="new" title="User:Martinowsky (page does not exist)">Martinowsky</a>; <a href="//commons.wikimedia.org/wiki/User:Chiswick_Chap" title="User:Chiswick Chap">Chiswick Chap</a> - <span class="int-own-work" lang="en">Own work</span>, cropped version of image, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=53619959">Link</a>
+                        </p>
+                 </div>
+             </div>
+        </div>
+        <div class="slide">
+             <h1> Przykład 2. Antybiotykoodporność</h1>
+             <div class="horizontal-container">
+                 <div class="vertical-container">
+                     <p class="left-text">Innym przykładem selekcji naturalnej jest rozwój oporności bakterii na antybiotyki. Kiedy bakterie są narażone na działanie antybiotyku, większość z nich ginie.</p>
+                     <p class="left-text">Jednak te, które mają mutacje pozwalające im przetrwać, rozmnażają się, tworząc populację odporną na dany lek.</p>
+                     <p class="img-caption">Zdjęcia autorstwa <a href="//commons.wikimedia.org/w/index.php?title=User:Wykis&amp;action=edit&amp;redlink=1" class="new" title="User:Wykis (page does not exist)">Wykis</a> - self-made, based on <a href="https://en.wikipedia.org/wiki/Image:Antibiotic_resistance.gif" class="extiw" title="w:Image:Antibiotic resistance.gif">w:Image:Antibiotic_resistance.gif</a>, but done from scratch, Domena publiczna, <a href="https://commons.wikimedia.org/w/index.php?curid=2064676">Link</a></p>
+                 </div>
+                 <div class="vertical-container">
+                     <img class="large-item light3" style="max-height: 50vh" src="{% static 'also/img/antybiotic.svg' %}" alt="Schemat pokazujący zasadę selekcji bakterii">
+                     <p>Zasada selekcji bakterii.</p>
+                     </div>
+             </div>
+        </div>
+        <div class="slide">
+            <h1>Wpływ środowiska</h1>
+            <div class="vertical-container">
+                 <p class="left-text">Selekcja naturalna jest dynamicznym procesem, który zależy od zmieniających się warunków. Organizm, który jest dobrze przystosowany do jednego środowiska, może mieć trudności w przystosowaniu się do innego. </p>
+                 <p class="left-text">Czynniki, które mają znaczenie w kształtowaniu się korzystnych cech to na przykład zmiany klimatyczne, nowe choroby, wprowadzenie nowych gatunków do ekosystemu.</p>
+                 <img class="medium-item" src="{% static 'also/img/eco-home.png' %}" alt="Środowisko">
+                 </div>
+              </div>
+         <div class="slide">
+            <h1>Gratulacje!</h1>
+            <div class="vertical-container">
+
+                    <p>Ukończyłeś kurs! Teraz wiesz więcej o selekcji naturalnej. </p>
+                <img class="medium-item" src="{% static 'also/img/trophy.png' %}" alt="Gratulacje">
+
+                <p>Zagraj w grę ALSO, aby zobaczyć ten mechanizm w praktyce.</p>
+
+
+                <div class="horizontal-container">
+                    <a class="button light4 nice-border" href="{% url 'rules' %}">Jak działa ALSO?</a>
+                    <p></p>
+                    <a class="button light4 nice-border" href="{% url 'play' %}">Zagraj w grę</a>
+                </div>
+
+
+                 </div>
+              </div>
+     </div>
+    <div class="navigation">
+        <button class="nav-button" id="nav-button-left"><</button>
+        <button class="nav-button" id="nav-button-right">></button>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'also/css/slider.css' %}">
+{% endblock %}
+
+{% block javascripts %}
+<script src="{% static 'also/js/slider.js' %}"></script>
+{% endblock %}

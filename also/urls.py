@@ -11,6 +11,7 @@ urlpatterns = [
     path("<int:species_id>/vote/", views.vote, name="vote"),
     path("species_list/", views.species_list, name="species_list"),
     path("rules/", views.rules, name="rules"),
+    path("education/", views.education, name="education"),
     path("play/", views.play, name="play"),
     path("about/", views.about, name="about"),
     path('register/', views.register, name='register'),
